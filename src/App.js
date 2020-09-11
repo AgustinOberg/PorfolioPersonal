@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom'
+import { CssBaseline } from '@material-ui/core';
+import Navbar from './Components/Navbar/Navbar'
+import Index from './Components/Inicio/Index';
+import SobreMi from './Components/SobreMi/SobreMi';
+import Proyectos from './Components/Proyectos/Proyectos';
+import Contacto from './Components/Contacto/Contacto'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <CssBaseline />
+      <Navbar />
+      <Route path="/sobre-mi" component={SobreMi} />
+      <Route path="/proyectos" component={Proyectos} />
+      <Route path="/contacto" component={Contacto} />
+      <Route exact path="/" component={Index} />
+    </>
   );
 }
 
