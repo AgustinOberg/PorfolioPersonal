@@ -1,6 +1,3 @@
-https://agustin-aguilera.netlify.app/
-
-
 # Porfolio personal ~ Aguilera Agustín
 
 
